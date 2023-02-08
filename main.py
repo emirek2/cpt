@@ -70,6 +70,18 @@ while player_play or dealer_play:
 if total(player)==21:
   print(f"\nYou have a total of {total(player)} and the dealer has {total(dealer)}.")
   print('You win!!!! Blackjack.')
-  
-  
-    
+elif total(dealer)==21:
+  print(f"\nYou have a total of {total(player)} and the dealer has {total(dealer)}.")
+  print('You Lose:( Blackjack.')
+elif total(player)>21:
+  print(f"\nYou have a total of {total(player)} and the dealer has {total(dealer)}.")
+  print('You lose:( Bust.')
+elif total(dealer)>21:
+  print(f"\nYou have a total of {total(player)} and the dealer has {total(dealer)}.")
+  print('You Win!!!! Dealer Bust.')
+elif total(player)>total(dealer):
+  print(f"\nYou have a total of {total(player)} and the dealer has {total(dealer)}.")
+  print('You Win!!!!')
+elif total(player)<total(dealer):
+  print(f"\nYou have a total of {total(player)} and the dealer has {total(dealer)}.")
+  print('You Lose:(')
